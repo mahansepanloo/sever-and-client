@@ -33,8 +33,6 @@ class Client:
         self.server_game.close()  
 
 
-if name == "main":  
-    # server = Server()  
-    # server.start_server('127.0.0.1', 12345)  
+if __name__ == "__main__":  
     client = Client()  
-    client.client('127.0.0.1', 12345)
+    client.client()
