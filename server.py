@@ -30,6 +30,6 @@ class Server: 
         self.server_game.close()  
 
 
-if name == "main":  
+if __name__ == "__main__":  
     server = Server()  
     server.start_server('127.0.0.1', 12345)
