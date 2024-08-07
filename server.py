@@ -1,3 +1,21 @@
+import socket
+import random
+
+class Game:
+ 
+    def __init__(self) -> None:  
+        self.secret_num = random.randint(1, 1000)  
+
+    def check_guess(self, guess):  
+        if guess < self.secret_num:  
+            return 'bigger'  
+        elif guess > self.secret_num:  
+            return 'smaller'  
+        else:  
+            return 'correct'
+
+
+
 class Server:  
     def init(self):  
         self.server_game = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  
